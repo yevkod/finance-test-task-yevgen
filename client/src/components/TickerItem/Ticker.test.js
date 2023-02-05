@@ -13,7 +13,7 @@ describe("<TickerItem /> component", () => {
             IsError: false,
         },
     });
-    it("should render correct company using 'ticker' value", () => {
+    it("should render rightly using 'ticker' value", () => {
         render(
             <Provider store={store}>
                 <TickerItem
@@ -26,20 +26,8 @@ describe("<TickerItem /> component", () => {
         screen.getByText(/facebook/i);
     });
 
-    // it("should render correct date using 'last_trade_time' value", () => {
-    //     render(
-    //         <Provider store={store}>
-    //             <TickerItem
-    //                 tickerData={{
-    //                     last_trade_time: "2023-02-05T11:53:21.000Z",
-    //                 }}
-    //             />
-    //         </Provider>
-    //     );
-    //     screen.getByText(/14:53:21 \(05\.02\.2023\)/i);
-    // });
 
-    it("should render correct arrow using 'previousTickers' value", () => {
+    it("should render the right variant of arrow using 'previousTickers' value", () => {
         const store = configureStore(storeReducer, {
             tickers: {
                 actualTickers: [],
@@ -59,7 +47,7 @@ describe("<TickerItem /> component", () => {
                         change_percent: 0.75,
                         dividend: 0.52,
                         yield: 1.31,
-                        last_trade_time: "2021-04-30T11:53:21.000Z",
+                        last_trade_time: "2022-02-05T11:53:21.000Z",
                     }}
                 />
             </Provider>

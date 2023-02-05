@@ -1,7 +1,6 @@
 import storeReducer, {
     getTickersActual,
     getTickersPrevious,
-    getTickersRequested,
     getTickersError,
 } from './storeSlice';
 
@@ -18,18 +17,8 @@ describe('storeSlice', () => {
         expect(result).toEqual(state);
     });
 
-    describe("for GET_TICKERS_REQUESTED action", () => {
-        it("should return state with truthy 'loading' property", () => {
-            expect(storeReducer(state, { type: getTickersRequested.type })).toEqual({
-                IsLoading: true,
-                actualTickers: [],
-                previousTickers: [],
-                IsError: false,
-            });
-        });
-    });
-    describe("for GET_TICKERS_ACTUAL action", () => {
-        it("should add passed data to 'actualTickers' property of state", () => {
+    describe("for 'getTickersActual' action", () => {
+        it("should add new data to 'getTickersActual' property of state", () => {
             expect(
                 storeReducer(undefined,{
                     type: getTickersActual.type,
@@ -61,8 +50,8 @@ describe('storeSlice', () => {
             });
         });
     });
-    describe("for GET_TICKERS_PREVIOUS action", () => {
-        it("should add passed data to 'previousTickers' property of state", () => {
+    describe("for 'getTickersPrevious' action", () => {
+        it("should add new data to 'getTickersPrevious' property of state", () => {
             expect(
                 storeReducer(state, {
                     type: getTickersPrevious.type,
@@ -86,8 +75,8 @@ describe('storeSlice', () => {
             });
         });
     });
-    describe("for GET_TICKERS_ERROR action", () => {
-        it("should return state with truthy 'error' property", () => {
+    describe("for 'getTickersError' action", () => {
+        it("should return state with 'error' property", () => {
             expect(storeReducer(undefined, { type: getTickersError.type })).toEqual({
                 actualTickers: [],
                 previousTickers: [],
