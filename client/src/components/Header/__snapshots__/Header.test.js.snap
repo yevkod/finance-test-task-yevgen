@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> component should match snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="logo"
+    >
+      <span>
+        Incode
+      </span>
+      <span
+        class="finance"
+      >
+        Finance
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,26 @@
+.logo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.finance {
+    color: #808080;
+}
+
+.logo > span {
+    font-size: 52px;
+    margin-top: -7px;
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    .logo > span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo > img {
+        width: 150px;
+    }
+}
